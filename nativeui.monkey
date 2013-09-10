@@ -1,5 +1,7 @@
 Strict
 
+'This module was backed by CopperCircle, you should thank him with praise and gifts a plenty!
+
 'version 1
 ' - first release working on iOS
 
