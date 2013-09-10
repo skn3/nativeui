@@ -457,7 +457,7 @@
 		
 		//create text field
 		self.inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(16,53,252,25)];
-		if (type = INPUT_TYPE_STRING) {
+		if (type == INPUT_TYPE_STRING) {
 			[self.inputTextField setKeyboardType:UIKeyboardTypeDefault];
 		} else {
 			[self.inputTextField setKeyboardType:UIKeyboardTypeNumberPad];
