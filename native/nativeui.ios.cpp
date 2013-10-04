@@ -621,16 +621,16 @@ void ShowConfirm(String rawTitle) {
 	[fuelSaverUIDelegate showConfirm:title];
 }
 
-void ShowMessage(String rawTitle) {
+void ShowMessage(String rawMessage,String rawTitle=NULL) {
 	// --- open an alert box ---
 	//make sure instance is created
 	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
 	
 	//convert values
-	NSString *title = rawTitle.ToNSString();
+	NSString *message = rawMessage.ToNSString();
 	
 	//call to instance to do it
-	[fuelSaverUIDelegate showMessage:title];
+	[fuelSaverUIDelegate showMessage:message];
 }
 
 bool HasInputFinished() {

@@ -5,9 +5,9 @@ Strict
 'version 1
 ' - first release working on iOS
 
-#If TARGET = "ios"
+#If TARGET = "ios" or TARGET = "glfw"
 	'ios
-	Import "native/nativeui.ios.cpp"
+	Import "native/nativeui.${TARGET}.cpp"
 
 	Const INPUT_TYPE_STRING:= 0
 	Const INPUT_TYPE_INT:= 1
@@ -22,7 +22,7 @@ Strict
 		
 		Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING)
 		Function ShowConfirm:Void(title:String)
-		Function ShowMessage:Void(title:String)
+		Function ShowMessage:Void(message:String, title:String = "")
 		Function HasInputFinished:Bool()
 		Function WasInputCancelled:Bool()
 		Function GetInputValue:String()
@@ -53,7 +53,7 @@ Strict
 	Function ShowConfirm:Void(title:String)
 	End
 	
-	Function ShowMessage:Void(title:String)
+	Function ShowMessage:Void(message:String, title:String = "")
 	End
 	
 	Function HasInputFinished:Bool()
