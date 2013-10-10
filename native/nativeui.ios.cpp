@@ -390,7 +390,9 @@
 	self.inputView = [[UIAlertView alloc] initWithTitle:title message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 	
 	//show the alert
-	[self.inputView show];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.inputView show];
+	});
 }
 
 - (void)showConfirm:(NSString *)title {
@@ -413,7 +415,9 @@
 	self.inputView = [[UIAlertView alloc] initWithTitle:title message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
 	
 	//show the alert
-	[self.inputView show];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.inputView show];
+	});
 }
 
 - (void)showInput:(NSString *)title value:(NSString *)value type:(int)type {
@@ -495,7 +499,9 @@
 	[self.inputTextField becomeFirstResponder];
 	
 	//show the alert
-	[self.inputView show];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.inputView show];
+	});
 }
 
 - (bool)hasInputFinished {
