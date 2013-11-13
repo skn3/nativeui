@@ -563,17 +563,19 @@ public:
 };
 
 //body
+NativeUIDelegateNative *NativeUINative::delegate = nil;
+
 void NativeUINative::InitNative() {
 	// --- lets us init at start of app ---
 	//make sure instance is created
-	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 }
 
 // --- picker view glue ------------
 void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 	// --- so here we have a invisible picker object ??? ---
 	//make sure instance is created
-	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert monkey array
 	NSInteger total = values.Length();
@@ -594,7 +596,7 @@ void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 	}
 	
 	//call instance method
-	[delegate showPicker:values2 selectedRow:row];
+	[NativeUINative::delegate showPicker:values2 selectedRow:row];
 	
 	//release values2
 	[values2 release];
@@ -603,15 +605,15 @@ void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 bool NativeUINative::HasPickerFinishedNative() {
 	// --- has picker finished ---
 	//check that instance exists
-	if (delegate == nil) { return true; }
-	return [delegate hasPickerFinished];
+	if (NativeUINative::delegate == nil) { return true; }
+	return [NativeUINative::delegate hasPickerFinished];
 }
 
 String NativeUINative::GetPickerValueNative() {
 	// --- has picker finished ---
 	//check that instance exists
-	if (delegate == nil) { return String(@""); }
-	return String([delegate getPickerValue]);
+	if (NativeUINative::delegate == nil) { return String(@""); }
+	return String([NativeUINative::delegate getPickerValue]);
 }
 
 
@@ -620,56 +622,56 @@ String NativeUINative::GetPickerValueNative() {
 void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *title = rawTitle.ToNSString();
 	NSString *value = rawValue.ToNSString();
 	
 	//call to instance to do it
-	[delegate showInput:title value:value type:type];
+	[NativeUINative::delegate showInput:title value:value type:type];
 }
 
 void NativeUINative::ShowConfirmNative(String rawTitle) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *title = rawTitle.ToNSString();
 	
 	//call to instance to do it
-	[delegate showConfirm:title];
+	[NativeUINative::delegate showConfirm:title];
 }
 
 void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *message = rawMessage.ToNSString();
 	
 	//call to instance to do it
-	[delegate showMessage:message];
+	[NativeUINative::delegate showMessage:message];
 }
 
 bool NativeUINative::HasInputFinishedNative() {
 	// --- returns true (once) if alert box has finished ---
 	//check that instance exists
-	if (delegate == nil) { return true; }
-	return [delegate hasInputFinished];
+	if (NativeUINative::delegate == nil) { return true; }
+	return [NativeUINative::delegate hasInputFinished];
 }
 
 bool NativeUINative::WasInputCancelledNative() {
 	//check that instance exists
-	if (delegate == nil) { return false; }
-	return [delegate wasInputCancelled];
+	if (NativeUINative::delegate == nil) { return false; }
+	return [NativeUINative::delegate wasInputCancelled];
 }
 
 String NativeUINative::GetInputValueNative() {
 	// --- get input value ---
 	//check that instance exists
-	if (delegate == nil) { return String(@""); }
-	return String([delegate getInputValue]);
+	if (NativeUINative::delegate == nil) { return String(@""); }
+	return String([NativeUINative::delegate getInputValue]);
 }
