@@ -1,3 +1,4 @@
+
 #define INPUT_MODE_TEXT 1
 #define INPUT_MODE_CONFIRM 2
 #define INPUT_MODE_MESSAGE 3
@@ -7,7 +8,7 @@
 #define INPUT_TYPE_FLOAT 2
 
 // --- shared delegate ------------
-@interface FuelSaverUIDelegate : NSObject<UIPickerViewDelegate,UIAlertViewDelegate,UITextFieldDelegate> {
+@interface NativeUIDelegateNative : NSObject<UIPickerViewDelegate,UIAlertViewDelegate,UITextFieldDelegate> {
 }
 
 @property (nonatomic, assign) NSObject *pickerLock;
@@ -57,7 +58,7 @@
 @end
 
 //implement delegate
-@implementation FuelSaverUIDelegate
+@implementation NativeUIDelegateNative
 @synthesize pickerLock;
 @synthesize pickerContainerView;
 @synthesize pickerView;
@@ -543,22 +544,36 @@
 
 
 
-// --- shared globals ---------
-FuelSaverUIDelegate *fuelSaverUIDelegate;
+// --- native ui class ---
+//header
+class NativeUINative {
+public:
+	static NativeUIDelegateNative *delegate;
+	
+	static void InitNative();
+	static void ShowPickerNative(Array<String > values,String value);
+	static bool HasPickerFinishedNative();
+	static String GetPickerValueNative();
+	static void ShowInputNative(String rawTitle, String rawValue, int type);
+	static void ShowConfirmNative(String rawTitle);
+	static void ShowMessageNative(String rawMessage,String rawTitle);
+	static bool HasInputFinishedNative();
+	static bool WasInputCancelledNative();
+	static String GetInputValueNative();
+};
 
-void InitNativeUI() {
+//body
+void NativeUINative::InitNative() {
 	// --- lets us init at start of app ---
 	//make sure instance is created
-	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
+	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
 }
 
-
-
 // --- picker view glue ------------
-void ShowPicker(Array<String > values,String value) {
+void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 	// --- so here we have a invisible picker object ??? ---
 	//make sure instance is created
-	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
+	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert monkey array
 	NSInteger total = values.Length();
@@ -579,83 +594,82 @@ void ShowPicker(Array<String > values,String value) {
 	}
 	
 	//call instance method
-	[fuelSaverUIDelegate showPicker:values2 selectedRow:row];
+	[delegate showPicker:values2 selectedRow:row];
 	
 	//release values2
 	[values2 release];
 }
 
-bool HasPickerFinished() {
+bool NativeUINative::HasPickerFinishedNative() {
 	// --- has picker finished ---
 	//check that instance exists
-	if (fuelSaverUIDelegate == nil) { return true; }
-	return [fuelSaverUIDelegate hasPickerFinished];
+	if (delegate == nil) { return true; }
+	return [delegate hasPickerFinished];
 }
 
-String GetPickerValue() {
+String NativeUINative::GetPickerValueNative() {
 	// --- has picker finished ---
 	//check that instance exists
-	if (fuelSaverUIDelegate == nil) { return String(@""); }
-	return String([fuelSaverUIDelegate getPickerValue]);
+	if (delegate == nil) { return String(@""); }
+	return String([delegate getPickerValue]);
 }
 
 
 
 // --- alert view stuff ------------
-void ShowInput(String rawTitle, String rawValue, int type) {
+void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
+	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *title = rawTitle.ToNSString();
 	NSString *value = rawValue.ToNSString();
 	
 	//call to instance to do it
-	[fuelSaverUIDelegate showInput:title value:value type:type];
+	[delegate showInput:title value:value type:type];
 }
 
-void ShowConfirm(String rawTitle) {
+void NativeUINative::ShowConfirmNative(String rawTitle) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
+	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *title = rawTitle.ToNSString();
 	
 	//call to instance to do it
-	[fuelSaverUIDelegate showConfirm:title];
+	[delegate showConfirm:title];
 }
 
-void ShowMessage(String rawMessage,String rawTitle=NULL) {
+void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle) {
 	// --- open an alert box ---
 	//make sure instance is created
-	if (fuelSaverUIDelegate == nil) { fuelSaverUIDelegate = [[FuelSaverUIDelegate alloc] init]; }
+	if (delegate == nil) { delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *message = rawMessage.ToNSString();
 	
 	//call to instance to do it
-	[fuelSaverUIDelegate showMessage:message];
+	[delegate showMessage:message];
 }
 
-bool HasInputFinished() {
+bool NativeUINative::HasInputFinishedNative() {
 	// --- returns true (once) if alert box has finished ---
 	//check that instance exists
-	if (fuelSaverUIDelegate == nil) { return true; }
-	return [fuelSaverUIDelegate hasInputFinished];
+	if (delegate == nil) { return true; }
+	return [delegate hasInputFinished];
 }
 
-bool WasInputCancelled() {
+bool NativeUINative::WasInputCancelledNative() {
 	//check that instance exists
-	if (fuelSaverUIDelegate == nil) { return false; }
-	return [fuelSaverUIDelegate wasInputCancelled];
+	if (delegate == nil) { return false; }
+	return [delegate wasInputCancelled];
 }
 
-String GetInputValue() {
+String NativeUINative::GetInputValueNative() {
 	// --- get input value ---
 	//check that instance exists
-	if (fuelSaverUIDelegate == nil) { return String(@""); }
-	return String([fuelSaverUIDelegate getInputValue]);
+	if (delegate == nil) { return String(@""); }
+	return String([delegate getInputValue]);
 }
-

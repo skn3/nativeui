@@ -1,37 +1,54 @@
-void InitNativeUI() {
+
+//header
+class NativeUINative {
+public:
+	static void InitNative();
+	static void ShowPickerNative(Array<String > values,String value);
+	static bool HasPickerFinishedNative();
+	static String GetPickerValueNative();
+	static void ShowInputNative(String rawTitle, String rawValue, int type);
+	static void ShowConfirmNative(String rawTitle);
+	static void ShowMessageNative(String rawMessage,String rawTitle);
+	static bool HasInputFinishedNative();
+	static bool WasInputCancelledNative();
+	static String GetInputValueNative();
+};
+
+//body
+void NativeUINative::InitNative() {
 }
 
-void ShowPicker(Array<String > values,String value) {
+void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 }
 
-bool HasPickerFinished() {
+bool NativeUINative::HasPickerFinishedNative() {
 	return true;
 }
 
-String GetPickerValue() {
+String NativeUINative::GetPickerValueNative() {
 	return String("");
 }
 
-void ShowInput(String rawTitle, String rawValue, int type) {
+void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type) {
 }
 
-void ShowConfirm(String rawTitle) {
+void NativeUINative::ShowConfirmNative(String rawTitle) {
 }
 
-void ShowMessage(String rawMessage,String rawTitle=NULL) {
+void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle) {
 	// --- open an alert box ---
 	//show the message
 	MessageBoxW(HWND_DESKTOP,(LPWSTR)(const wchar_t*)rawMessage.ToCString<wchar_t>(),(LPWSTR)(const wchar_t*)rawTitle.ToCString<wchar_t>(),MB_OK);
 }
 
-bool HasInputFinished() {
+bool NativeUINative::HasInputFinishedNative() {
 	return true;
 }
 
-bool WasInputCancelled() {
+bool NativeUINative::WasInputCancelledNative() {
 	return true;
 }
 
-String GetInputValue() {
+String NativeUINative::GetInputValueNative() {
 	return String("");
 }
