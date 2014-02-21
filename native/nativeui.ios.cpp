@@ -486,7 +486,7 @@
 			break;
 		case INPUT_TYPE_FLOAT:
 			//float
-			if ([[vComp objectAtIndex:0] intValue] >= 4 && [[vComp objectAtIndex:1] intValue] >= 1) {
+			if ([[vComp objectAtIndex:0] intValue] >= 5) {
 				//new method
 				[self.inputTextField setKeyboardType:UIKeyboardTypeDecimalPad];
 			} else {
