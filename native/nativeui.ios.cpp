@@ -18,6 +18,7 @@
 @property (nonatomic, assign) UITextField *pickerTextField;
 @property (nonatomic, retain) NSMutableArray *pickerValues;
 @property (nonatomic) NSUInteger pickerValuesTotal;
+@property (nonatomic) NSInteger pickerIndex;
 @property (nonatomic, retain) NSString *pickerValue;
 @property (nonatomic) bool pickerActive;
 @property (nonatomic) bool pickerFinished;
@@ -44,6 +45,7 @@
 - (void)pickerDoneClicked:(id)sender;
 - (void)showPicker:(NSMutableArray *)values selectedRow:(NSInteger)selectedRow;
 - (bool)hasPickerFinished;
+- (NSInteger)getPickerIndex;
 - (NSString *)getPickerValue;
 
 //alert view
@@ -66,6 +68,7 @@
 @synthesize pickerTextField;
 @synthesize pickerValues;
 @synthesize pickerValuesTotal;
+@synthesize pickerIndex;
 @synthesize pickerValue;
 @synthesize pickerActive;
 @synthesize pickerFinished;
@@ -227,6 +230,7 @@
 	NSInteger row = [self.pickerView selectedRowInComponent:0];
 	
 	@synchronized(pickerLock) {
+		self.pickerIndex = row;
 		if (row == -1) {
 			//no selection
 			self.pickerValue = @"";
@@ -268,6 +272,7 @@
 	
 	//save values array
 	//this will retain it
+	self.pickerIndex = selectedRow;
 	self.pickerValues = values;
 	self.pickerValuesTotal = [values count];
 	
@@ -301,6 +306,13 @@
 	// --- get picker value as monkey string ---
 	@synchronized(pickerLock) {
 		return self.pickerValue;
+	}
+}
+
+- (NSInteger)getPickerIndex {
+	// --- get picker value as monkey string ---
+	@synchronized(pickerLock) {
+		return self.pickerIndex;
 	}
 }
 
@@ -554,6 +566,7 @@ public:
 	static void ShowPickerNative(Array<String > values,String value);
 	static bool HasPickerFinishedNative();
 	static String GetPickerValueNative();
+	static int GetPickerIndexNative();
 	static void ShowInputNative(String rawTitle, String rawValue, int type);
 	static void ShowConfirmNative(String rawTitle);
 	static void ShowMessageNative(String rawMessage,String rawTitle);
@@ -607,6 +620,13 @@ bool NativeUINative::HasPickerFinishedNative() {
 	//check that instance exists
 	if (NativeUINative::delegate == nil) { return true; }
 	return [NativeUINative::delegate hasPickerFinished];
+}
+
+int NativeUINative::GetPickerIndexNative() {
+	// --- has picker finished ---
+	//check that instance exists
+	if (NativeUINative::delegate == nil) { return -1; }
+	return int([NativeUINative::delegate getPickerIndex]);
 }
 
 String NativeUINative::GetPickerValueNative() {

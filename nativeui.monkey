@@ -2,6 +2,17 @@ Strict
 
 'This module was backed by CopperCircle, you should thank him with praise and gifts a plenty!
 
+'version 3
+' - added code to force all android with ui are run on ui thread.
+' - added solution to repo
+' - implemented lee's changes to android
+' - added GetPickerIndex to find out the array index of teh selected item
+' - added android native code for handling one picker/input/message at a time
+' - tweaked lees text input code to clean things up
+' - added picker routine
+' - added confirm ok/cancel routine
+' - tweaked existing message box routine
+' - added code to handle "finished/done" being pressed when input box is showing
 'version 2
 ' - refactored all native files to use different structure
 ' - added support for android ShowMessage
@@ -23,6 +34,7 @@ Strict
 			Function ShowPicker:Void(values:String[], value:String = "") = "NativeUINative.ShowPickerNative"
 			Function HasPickerFinished:Bool() = "NativeUINative.HasPickerFinishedNative"
 			Function GetPickerValue:String() = "NativeUINative.GetPickerValueNative"
+			Function GetPickerIndex:Int() = "NativeUINative.GetPickerIndexNative"
 			
 			Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING) = "NativeUINative.ShowInputNative"
 			Function ShowConfirm:Void(title:String) = "NativeUINative.ShowConfirmNative"
@@ -38,6 +50,7 @@ Strict
 			Function ShowPicker:Void(values:String[], value:String = "") = "NativeUINative::ShowPickerNative"
 			Function HasPickerFinished:Bool() = "NativeUINative::HasPickerFinishedNative"
 			Function GetPickerValue:String() = "NativeUINative::GetPickerValueNative"
+			Function GetPickerIndex:Int() = "NativeUINative::GetPickerIndexNative"
 			
 			Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING) = "NativeUINative::ShowInputNative"
 			Function ShowConfirm:Void(title:String) = "NativeUINative::ShowConfirmNative"
@@ -65,6 +78,10 @@ Strict
 	
 	Function GetPickerValue:String()
 		Return ""
+	End
+	
+	Function GetPickerIndex:Int()
+		Return -1
 	End
 
 	Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING)

@@ -18,11 +18,11 @@ Class MyApp Extends App
 		InitNativeUI()
 		
 		'setup buttons
-		Local cursorX:= 5
-		Local cursorY:= 5
-		Local width:= DeviceWidth() -10
-		Local height:= 40
-		Local spacing:= 8
+		Local cursorX:= 20
+		Local cursorY:= 20
+		Local width:= DeviceWidth() -40
+		Local height:= 80
+		Local spacing:= 20
 		
 		buttons.AddLast(New Button("text", "Click to show Text Input", cursorX, cursorY, width, height))
 		cursorY += height + spacing
@@ -57,7 +57,7 @@ Class MyApp Extends App
 								Print "opening text input"
 								waiting = True
 								lastId = button.id
-								ShowInput("Enter Some Text", "", INPUT_TYPE_STRING)
+								ShowInput("Enter Some Text", "existing text", INPUT_TYPE_STRING)
 							Case "number"
 								Print "opening number input"
 								waiting = True
@@ -77,7 +77,7 @@ Class MyApp Extends App
 								Print "opening picker"
 								waiting = True
 								lastId = button.id
-								ShowPicker(["one", "two", "three", "four"], "")
+								ShowPicker(["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"], "three")
 						End
 					EndIf
 				Next
@@ -105,11 +105,12 @@ Class MyApp Extends App
 						If WasInputCancelled()
 							Print "picker was cancelled"
 						Else
+							Print "picker index = " + GetPickerIndex()
 							Print "picker value = "+GetPickerValue()
 						Endif
 					Endif
 					
-				Default 
+				Default
 					If HasInputFinished()
 						waiting = False
 						If WasInputCancelled()
@@ -123,7 +124,8 @@ Class MyApp Extends App
 		Return 0
 	End
 	
-	Method OnRender:Int()		
+	Method OnRender:Int()
+		Cls(0, 0, 0)
 		For Local button:= EachIn buttons
 			SetColor(128, 128, 128)
 			DrawRect(button.x, button.y, button.width, button.height)

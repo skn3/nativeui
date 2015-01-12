@@ -6,6 +6,7 @@ public:
 	static void ShowPickerNative(Array<String > values,String value);
 	static bool HasPickerFinishedNative();
 	static String GetPickerValueNative();
+	static int GetPickerIndexNative();
 	static void ShowInputNative(String rawTitle, String rawValue, int type);
 	static void ShowConfirmNative(String rawTitle);
 	static void ShowMessageNative(String rawMessage,String rawTitle);
@@ -27,6 +28,10 @@ bool NativeUINative::HasPickerFinishedNative() {
 
 String NativeUINative::GetPickerValueNative() {
 	return String("");
+}
+
+int NativeUINative::GetPickerIndexNative() {
+	return -1;
 }
 
 void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type) {
