@@ -10,7 +10,7 @@ End
 
 Class MyApp Extends App
 	Field lastId:String
-	Field buttons:= New List<Button>
+	Field buttons := New List<Button>
 	Field waiting:= False
 	
 	Method OnCreate:Int()
@@ -18,11 +18,11 @@ Class MyApp Extends App
 		InitNativeUI()
 		
 		'setup buttons
-		Local cursorX:= 20
-		Local cursorY:= 20
-		Local width:= DeviceWidth() -40
-		Local height:= 80
-		Local spacing:= 20
+		Local cursorX := 20
+		Local cursorY := 20
+		Local width := DeviceWidth() -40
+		Local height := 80
+		Local spacing := 20
 		
 		buttons.AddLast(New Button("text", "Click to show Text Input", cursorX, cursorY, width, height))
 		cursorY += height + spacing
@@ -39,6 +39,15 @@ Class MyApp Extends App
 		buttons.AddLast(New Button("picker", "Click to show Picker", cursorX, cursorY, width, height))
 		cursorY += height + spacing
 		
+		buttons.AddLast(New Button("date", "Click to show Date Picker", cursorX, cursorY, width, height))
+		cursorY += height + spacing
+		
+		buttons.AddLast(New Button("time", "Click to show Time Picker", cursorX, cursorY, width, height))
+		cursorY += height + spacing
+		
+		buttons.AddLast(New Button("dateAndTime", "Click to show Date and Time Picker", cursorX, cursorY, width, height))
+		cursorY += height + spacing
+		
 		'set monkey update rate
 		SetUpdateRate(30)
 		
@@ -50,7 +59,7 @@ Class MyApp Extends App
 		If waiting = False
 			'we are waiting for user to open some input
 			If MouseHit(MOUSE_LEFT)
-				For Local button:= Eachin buttons
+				For Local button := Eachin buttons
 					If MouseX() >= button.x And MouseY() >= button.y And MouseX() < button.x + button.width And MouseY() < button.y + button.height
 						Select button.id
 							Case "text"
@@ -67,7 +76,7 @@ Class MyApp Extends App
 								Print "opening message"
 								waiting = True
 								lastId = button.id
-								ShowMessage("Hello World!")
+								ShowMessage("Hello World!", "Title", "Agree")
 							Case "confirm"
 								Print "opening confirm"
 								waiting = True
@@ -78,6 +87,21 @@ Class MyApp Extends App
 								waiting = True
 								lastId = button.id
 								ShowPicker(["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"], "three")
+							Case "date"
+								Print "opening date picker"
+								waiting = True
+								lastId = button.id
+								ShowDatePicker("Date")
+							Case "time"
+								Print "opening time picker"
+								waiting = True
+								lastId = button.id
+								ShowDatePicker("time")
+							Case "dateAndTime"
+								Print "opening date and time picker"
+								waiting = True
+								lastId = button.id
+								ShowDatePicker("datetime")
 						End
 					EndIf
 				Next
@@ -109,7 +133,33 @@ Class MyApp Extends App
 							Print "picker value = "+GetPickerValue()
 						Endif
 					Endif
-					
+				Case "date"
+					If HasDatePickerFinished()
+						waiting = False
+						If WasInputCancelled()
+							Print "date picker was cancelled"
+						Else
+							Print "picker value = "+GetDatePickerValue()
+						Endif
+					Endif
+				Case "time"
+					If HasDatePickerFinished()
+						waiting = False
+						If WasInputCancelled()
+							Print "time picker was cancelled"
+						Else
+							Print "picker value = "+GetDatePickerValue()
+						Endif
+					Endif
+				Case "dateAndTime"
+					If HasDatePickerFinished()
+						waiting = False
+						If WasInputCancelled()
+							Print "date and time picker was cancelled"
+						Else
+							Print "picker value = "+GetDatePickerValue()
+						Endif
+					Endif
 				Default
 					If HasInputFinished()
 						waiting = False
@@ -126,7 +176,7 @@ Class MyApp Extends App
 	
 	Method OnRender:Int()
 		Cls(0, 0, 0)
-		For Local button:= EachIn buttons
+		For Local button := EachIn buttons
 			SetColor(128, 128, 128)
 			DrawRect(button.x, button.y, button.width, button.height)
 			SetColor(255, 255, 255)

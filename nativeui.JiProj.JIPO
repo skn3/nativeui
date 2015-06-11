@@ -8,15 +8,14 @@
       </CursorPos>
       <DocGUID />
     </DocUserOptions>
-    <DocUserOptions Filename=".\native\nativeui.glfw.cpp" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="179">
+    <DocUserOptions Filename=".\native\nativeui.glfw.cpp" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="179">
       <CursorPos>
         <X>1</X>
-        <Y>34</Y>
+        <Y>46</Y>
       </CursorPos>
       <OutLiningSerialization />
       <OutLiningSplitSerialization />
-      <DocGUID>b4eb8ada-b573-41ec-b8ff-3f88188d30a0</DocGUID>
-      <Bookmarks />
+      <DocGUID />
     </DocUserOptions>
     <DocUserOptions Filename=".\native\nativeui.ios.cpp" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="179">
       <CursorPos>
@@ -30,184 +29,604 @@
     </DocUserOptions>
     <DocUserOptions Filename=".\nativeui.monkey" Open="true" SplitView="false" SplitIsVertical="false" SplitSize="179">
       <CursorPos>
-        <X>51</X>
-        <Y>10</Y>
+        <X>62</X>
+        <Y>64</Y>
       </CursorPos>
-      <OutLiningSerialization />
-      <OutLiningSplitSerialization />
+      <OutLiningSerialization>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>77</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>29</X>
+            <Y>76</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>80</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>61</X>
+            <Y>79</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>84</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>34</X>
+            <Y>82</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>88</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>33</X>
+            <Y>86</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>92</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>30</X>
+            <Y>90</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>95</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>42</X>
+            <Y>94</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>99</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>38</X>
+            <Y>97</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>103</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>37</X>
+            <Y>101</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>106</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>87</X>
+            <Y>105</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>109</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>40</X>
+            <Y>108</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>112</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>83</X>
+            <Y>111</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>116</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>33</X>
+            <Y>114</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>120</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>34</X>
+            <Y>118</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>124</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>32</X>
+            <Y>122</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+      </OutLiningSerialization>
+      <OutLiningSplitSerialization>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>77</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>29</X>
+            <Y>76</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>80</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>61</X>
+            <Y>79</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>84</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>34</X>
+            <Y>82</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>88</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>33</X>
+            <Y>86</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>92</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>30</X>
+            <Y>90</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>95</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>42</X>
+            <Y>94</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>99</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>38</X>
+            <Y>97</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>103</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>37</X>
+            <Y>101</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>106</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>87</X>
+            <Y>105</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>109</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>40</X>
+            <Y>108</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>112</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>83</X>
+            <Y>111</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>116</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>33</X>
+            <Y>114</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>120</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>34</X>
+            <Y>118</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+        <Folding_Nodes_Collection>
+          <Collapsed_Text>...</Collapsed_Text>
+          <EndPoint>
+            <X>4</X>
+            <Y>124</Y>
+          </EndPoint>
+          <IsEmpty>false</IsEmpty>
+          <ASTNestingLevel>0</ASTNestingLevel>
+          <StartPoint>
+            <X>32</X>
+            <Y>122</Y>
+          </StartPoint>
+          <Text>...</Text>
+          <Expanded>true</Expanded>
+        </Folding_Nodes_Collection>
+      </OutLiningSplitSerialization>
       <DocGUID>010817f9-dbfa-4ec4-8841-474741aecc1c</DocGUID>
       <Bookmarks />
     </DocUserOptions>
   </Files>
   <Folders>
     <FolderStatus NodePath="nativeui\example1" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\assets" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\assets\monkey" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\classes" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\classes\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\classes\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\classes\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\dexedLibs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\res\drawable-hdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\res\drawable-ldpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\bin\res\drawable-mdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\gen" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\gen\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\gen\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\gen\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\libs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\jni" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\libs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\libs\armeabi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\libs\armeabi-v7a" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\libs\x86" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi-v7a" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi-v7a\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\armeabi-v7a\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\x86" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\x86\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\nativegl\obj\local\x86\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res\drawable-hdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res\drawable-ldpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res\drawable-mdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res\layout" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\res\values" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\src" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\src\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\src\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\src\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\templates" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\templates\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android\templates\res\layout" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\assets" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\assets\monkey" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\classes" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\classes\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\classes\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\classes\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\dexedLibs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\res\drawable-hdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\res\drawable-ldpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\bin\res\drawable-mdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\gen" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\gen\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\gen\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\gen\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\libs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\color" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\drawable" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\drawable-hdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\drawable-mdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\drawable-xhdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\drawable-xxhdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-af" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-am" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ar" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-be" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-bg" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ca" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-cs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-da" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-de" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-el" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-en-rGB" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-en-rIN" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-es" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-es-rUS" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-et-rEE" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-fa" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-fi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-fr" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-fr-rCA" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-hi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-hr" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-hu" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-hy-rAM" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-in" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-it" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-iw" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ja" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ka-rGE" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-km-rKH" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ko" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-lo-rLA" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-lt" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-lv" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-mn-rMN" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ms-rMY" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-nb" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-nl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-pl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-pt" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-pt-rBR" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-pt-rPT" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ro" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-ru" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-sk" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-sl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-sr" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-sv" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-sw" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-th" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-tl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-tr" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-uk" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-vi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-zh-rCN" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-zh-rHK" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-zh-rTW" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\res\values-zu" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\src" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\google-play-services_lib\src\android" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\libs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\jni" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\libs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\libs\armeabi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\libs\armeabi-v7a" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\libs\x86" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi-v7a" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi-v7a\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\armeabi-v7a\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\x86" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\x86\objs" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\nativegl\obj\local\x86\objs\nativegl" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res\drawable-hdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res\drawable-ldpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res\drawable-mdpi" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res\layout" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\res\values" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\src" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\src\com" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\src\com\monkeycoder" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\src\com\monkeycoder\monkeygame" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\templates" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\templates\google-play-services_lib" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\templates\res" Expanded="false" />
-    <FolderStatus NodePath="nativeui\example1\example1.buildv82a\android_new\templates\res\layout" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\assets" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\assets\monkey" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\classes" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\classes\com" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\classes\com\monkeycoder" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\classes\com\monkeycoder\monkeygame" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\dexedLibs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\res" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\res\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\res\drawable-ldpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\bin\res\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\gen" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\gen\com" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\gen\com\monkeycoder" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\gen\com\monkeycoder\monkeygame" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\assets" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes\android" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes\com" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes\com\google" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes\com\google\android" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\classes\com\google\android\gms" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res\crunch" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res\crunch\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res\crunch\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res\crunch\drawable-xhdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\bin\res\crunch\drawable-xxhdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\gen" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\gen\com" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\gen\com\google" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\gen\com\google\android" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\gen\com\google\android\gms" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\libs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\color" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable-ldpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable-xhdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\drawable-xxhdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\layout" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-af" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-am" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ar" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-be" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-bg" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ca" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-cs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-da" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-de" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-el" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-en-rGB" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-en-rIN" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-es" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-es-rUS" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-et-rEE" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-fa" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-fi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-fr" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-fr-rCA" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-hi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-hr" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-hu" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-hy-rAM" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-in" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-it" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-iw" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ja" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ka-rGE" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-km-rKH" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ko" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-lo-rLA" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-lt" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-lv" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-mn-rMN" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ms-rMY" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-nb" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-nl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-pl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-pt" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-pt-rBR" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-pt-rPT" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ro" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-ru" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-sk" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-sl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-sr" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-sv" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-sw" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-th" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-tl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-tr" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-uk" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-vi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-zh-rCN" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-zh-rHK" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-zh-rTW" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\res\values-zu" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\src" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\google-play-services_lib\src\android" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\libs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\jni" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\libs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\libs\armeabi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\libs\armeabi-v7a" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\libs\x86" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi\objs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi-v7a" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi-v7a\objs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\armeabi-v7a\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\x86" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\x86\objs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\nativegl\obj\local\x86\objs\nativegl" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\drawable-hdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\drawable-ldpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\drawable-mdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\drawable-xhdpi" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\layout" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\res\values" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\src" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\src\com" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\src\com\monkeycoder" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\src\com\monkeycoder\monkeygame" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\templates" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\templates\google-play-services_lib" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\templates\res" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\android_new\templates\res\layout" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app\data" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app.dSYM" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app.dSYM\Contents" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app.dSYM\Contents\Resources" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\Debug-iphonesimulator\MonkeyGame.app.dSYM\Contents\Resources\DWARF" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\MonkeyGame.build" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\MonkeyGame.build\Debug-iphonesimulator" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\MonkeyGame.build\Debug-iphonesimulator\MonkeyGame.build" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\MonkeyGame.build\Debug-iphonesimulator\MonkeyGame.build\Objects-normal" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\build\MonkeyGame.build\Debug-iphonesimulator\MonkeyGame.build\Objects-normal\i386" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\data" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\libs" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\project.xcworkspace" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\project.xcworkspace\xcuserdata" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\project.xcworkspace\xcuserdata\Reactor.xcuserdatad" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\xcuserdata" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\xcuserdata\Reactor.xcuserdatad" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\xcuserdata\Reactor.xcuserdatad\xcdebugger" Expanded="false" />
+    <FolderStatus NodePath="nativeui\example1\example1.buildv83a\ios\MonkeyGame.xcodeproj\xcuserdata\Reactor.xcuserdatad\xcschemes" Expanded="false" />
     <FolderStatus NodePath="nativeui\native" Expanded="true" />
   </Folders>
 </JiProjUserOptions>

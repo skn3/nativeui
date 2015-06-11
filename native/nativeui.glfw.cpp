@@ -9,7 +9,7 @@ public:
 	static int GetPickerIndexNative();
 	static void ShowInputNative(String rawTitle, String rawValue, int type);
 	static void ShowConfirmNative(String rawTitle);
-	static void ShowMessageNative(String rawMessage,String rawTitle);
+	static void ShowMessageNative(String rawMessage,String rawTitle, String rawButton);
 	static bool HasInputFinishedNative();
 	static bool WasInputCancelledNative();
 	static String GetInputValueNative();
@@ -40,10 +40,10 @@ void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type)
 void NativeUINative::ShowConfirmNative(String rawTitle) {
 }
 
-void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle) {
+void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle,String rawButton) {
 	// --- open an alert box ---
 	//show the message
-	MessageBoxW(HWND_DESKTOP,(LPWSTR)(const wchar_t*)rawMessage.ToCString<wchar_t>(),(LPWSTR)(const wchar_t*)rawTitle.ToCString<wchar_t>(),MB_OK);
+	MessageBoxW(HWND_DESKTOP,(LPWSTR)(const wchar_t*)rawMessage.ToCString<wchar_t>(),(LPWSTR)(const wchar_t*)rawTitle.ToCString<wchar_t>(),(LPWSTR)(const wchar_t*)rawButton.ToCString<wchar_t>());
 }
 
 bool NativeUINative::HasInputFinishedNative() {

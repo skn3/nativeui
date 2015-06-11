@@ -23,6 +23,17 @@
 @property (nonatomic) bool pickerActive;
 @property (nonatomic) bool pickerFinished;
 
+
+@property (nonatomic, assign) NSObject *datePickerLock;
+@property (nonatomic, assign) UIView *datePickerContainerView;
+@property (nonatomic, assign) UIPickerView *datePickerView;
+@property (nonatomic, assign) UIView *datePickerAccessoryView;
+@property (nonatomic, assign) UITextField *datePickerTextField;
+@property (nonatomic, assign) UIDatePicker *datePicker;
+@property (nonatomic) bool datePickerActive;
+@property (nonatomic) bool datePickerFinished;
+
+
 @property (nonatomic, assign) NSObject *inputLock;
 @property (nonatomic, assign) UIAlertView *inputView;
 @property (nonatomic, assign) UITextField *inputTextField;
@@ -48,11 +59,17 @@
 - (NSInteger)getPickerIndex;
 - (NSString *)getPickerValue;
 
+//date picker view
+- (void)datePickerDoneClicked:(id)sender;
+- (void)showDatePicker:(NSString*)mode;
+- (bool)hasDatePickerFinished;
+- (NSString *)getDatePickerValue;
+
 //alert view
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 - (void)showInput:(NSString *)title value:(NSString *)value type:(int)type;
 - (void)showConfirm:(NSString *)title;
-- (void)showMessage:(NSString *)title;
+- (void)showMessage:(NSString *)message title:(NSString *)title button:(NSString *)button;
 - (bool)hasInputFinished;
 - (bool)wasInputCancelled;
 - (NSString *)getInputValue;
@@ -73,6 +90,15 @@
 @synthesize pickerActive;
 @synthesize pickerFinished;
 
+@synthesize datePickerLock;
+@synthesize datePickerContainerView;
+@synthesize datePickerView;
+@synthesize datePickerAccessoryView;
+@synthesize datePickerTextField;
+@synthesize datePicker;
+@synthesize datePickerActive;
+@synthesize datePickerFinished;
+
 @synthesize inputLock = _inputLock;
 @synthesize inputView = _inputView;
 @synthesize inputTextField = _inputTextField;
@@ -91,6 +117,12 @@
 		@synchronized(pickerLock) {
 			self.pickerActive = false;
 			self.pickerFinished = true;
+		}
+		
+		self.datePickerLock = [[NSObject alloc] init];
+		@synchronized(datePickerLock) {
+			self.datePickerActive = false;
+			self.datePickerFinished = true;
 		}
 		
 		//get main view so we can add stuff to it
@@ -118,6 +150,7 @@
 		[emptySpaceItem release];
 		[doneItem release];
 		[toolbar release];
+
 		
 		// --- create custom "keyboard" ---
 		//create container
@@ -138,6 +171,49 @@
 		[mainView addSubview: self.pickerTextField];
 		
 		
+		
+		// [ date picker ]
+		// --- create accessory view ---
+		self.datePickerAccessoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainView.frame.size.width, 44)];
+
+		//create toolbar
+		UIToolbar *dateToolbar = [[UIToolbar alloc] initWithFrame: CGRectMake(0, 0, self.datePickerAccessoryView.frame.size.width, self.datePickerAccessoryView.frame.size.height)];
+		dateToolbar.barStyle = UIBarStyleBlack;
+		
+		//add date toolbar items
+		UIBarButtonItem *dateEmptySpaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+		UIBarButtonItem *dateDoneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(datePickerDoneClicked:)];
+		NSArray *dateToolbarItems = [NSArray arrayWithObjects: dateEmptySpaceItem, dateDoneItem, nil];
+		[dateToolbar setItems:dateToolbarItems animated:NO];
+				
+		//add toolbar to accessoryview
+		[self.datePickerAccessoryView addSubview:dateToolbar];
+		
+		
+		// --- create custom "keyboard" ---
+		//create container
+		self.datePickerContainerView = [[UIView alloc] initWithFrame: CGRectMake ( 0, 0, mainView.frame.size.width, 216)];
+		
+		//create datePicker
+		datePicker = [[UIDatePicker alloc] initWithFrame: CGRectMake(0, 0, self.datePickerAccessoryView.frame.size.width, self.datePickerAccessoryView.frame.size.height)];
+		[datePicker addTarget:self action:@selector(updateDateTextField:) forControlEvents:UIControlEventValueChanged];
+		//add control to accessoryview
+		[self.datePickerContainerView addSubview:datePicker];
+		
+		// --- create textfield to handle input ---
+		//need to create a hidden textinput to deal with getting value for date picker
+		self.datePickerTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0,100, 25)];
+		self.datePickerTextField.hidden = YES;		
+		[self.datePickerTextField setInputView:self.datePickerContainerView];
+		[self.datePickerTextField setInputAccessoryView:self.datePickerAccessoryView];
+		[mainView addSubview: self.datePickerTextField];
+		
+		//release waste
+		[dateEmptySpaceItem release];
+		[dateDoneItem release];
+		[dateToolbar release];
+		
+		
 		//[ input ]
 		self.inputLock = [[NSObject alloc] init];
 		@synchronized(self.inputLock) {
@@ -150,21 +226,6 @@
 }
 
 -(void)dealloc {
-	//do need to dismiss the inputview?
-	@synchronized(self.inputLock) {
-		if (self.inputActive) {
-			self.inputActive = false;
-			[self.inputView dismissWithClickedButtonIndex:self.inputView.cancelButtonIndex animated:YES];
-			
-			//release stuff
-			[self.inputTextField release];
-			[self.inputView release];
-			
-			self.inputTextField = nil;
-			self.inputView = nil;
-		}
-	}
-	
 	//do we need to close the picker?
 	@synchronized(pickerLock) {
 		if (self.pickerActive) {
@@ -187,10 +248,49 @@
 		self.pickerContainerView = nil;
 	}
 	
+	//do we need to close the date picker?
+	@synchronized(datePickerLock) {
+		if (self.datePickerActive) {
+			self.datePickerActive = false;
+			[[BBIosGame::IosGame()->GetUIAppDelegate() view] endEditing:NO];
+		}
+		
+		//remove ui from monkey view
+		[self.datePickerTextField removeFromSuperview];
+		
+		//release stuff
+		[self.datePickerTextField release];
+		[self.datePickerAccessoryView release];
+		[self.datePickerView release];
+		[self.datePickerContainerView release];
+		
+		self.datePickerTextField = nil;
+		self.datePickerAccessoryView = nil;
+		self.datePickerView = nil;
+		self.datePickerContainerView = nil;
+	}
+	
+	//do need to dismiss the inputview?
+	@synchronized(self.inputLock) {
+		if (self.inputActive) {
+			self.inputActive = false;
+			[self.inputView dismissWithClickedButtonIndex:self.inputView.cancelButtonIndex animated:YES];
+			
+			//release stuff
+			[self.inputTextField release];
+			[self.inputView release];
+			
+			self.inputTextField = nil;
+			self.inputView = nil;
+		}
+	}
+	
 	//release locks
 	[self.pickerLock release];
+	[self.datePickerLock release];
 	[self.inputLock release];
 	self.pickerLock = nil;
+	self.datePickerLock = nil;
 	self.inputLock = nil;
 	
 	//call chain
@@ -253,6 +353,7 @@
 }
 
 - (void)showPicker:(NSMutableArray *)values selectedRow:(NSInteger)selectedRow {
+	self.pickerFinished = false;
 	// --- show the picker ---
 	@synchronized(pickerLock) {
 		//check if there is an existing session
@@ -316,6 +417,108 @@
 	}
 }
 
+//date picker view protocol
+
+-(void)updateDateTextField:(UIDatePicker *)sender
+{
+	NSDateFormatter *formatter;
+	
+	formatter = [[NSDateFormatter alloc] init];
+	if(sender.datePickerMode == UIDatePickerModeDate)
+	{
+		[formatter setDateFormat:@"dd-MM-yyyy"];
+	}
+	else if(sender.datePickerMode == UIDatePickerModeTime)
+	{
+		[formatter setDateFormat:@"HH:mm"];
+	}
+	else if(sender.datePickerMode == UIDatePickerModeDateAndTime)
+	{
+		[formatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+	}
+	
+    self.datePickerTextField.text = [formatter stringFromDate:[sender date]];
+    
+    [formatter release];
+}
+
+- (void)datePickerDoneClicked:(id)sender {
+	// --- done has been pressed ---
+	//save date and close the date picker
+	
+	@synchronized(datePickerLock) {	
+		//finish the date picker
+		self.datePickerActive = false;
+		self.datePickerFinished = true;
+	}
+	
+	//close the date picker
+	[[BBIosGame::IosGame()->GetUIAppDelegate() view] endEditing:NO];
+}
+
+- (void)showDatePicker:(NSString*)mode {
+	self.datePickerFinished = false;
+	// --- show the date picker ---
+	@synchronized(datePickerLock) {
+		//check if there is an existing session
+		if (self.datePickerActive == true) {
+			//close previous session
+			self.datePickerActive = false;
+			//self.datePickerValues = nil;
+			
+			//close the date picker
+			[[BBIosGame::IosGame()->GetUIAppDelegate() view] endEditing:NO];
+		}
+		
+		//start new date picker session
+		self.datePickerActive = true;
+		self.datePickerFinished = false;
+	}
+	
+	//tell picker to reload
+	[self.datePickerView reloadAllComponents];
+	
+	//start the date picker session
+	[self.datePickerTextField becomeFirstResponder];
+	
+	//set Type
+	if([mode isEqual:@"date"])
+		{
+			datePicker.datePickerMode = UIDatePickerModeDate;
+		}
+		else if([mode isEqual:@"time"])
+		{
+			datePicker.datePickerMode = UIDatePickerModeTime;
+		}
+		else if([mode isEqual:@"datetime"])
+		{
+			datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+		}
+
+
+	[self updateDateTextField:datePicker];
+}
+
+- (bool)hasDatePickerFinished {
+	// --- return true if the date picker has finished ---
+	@synchronized(datePickerLock) {
+		//only once
+		if (self.datePickerFinished == true) {
+			self.datePickerFinished = false;
+			return true;
+		}
+	}
+	
+	//nope
+	return false;
+}
+
+- (NSString *)getDatePickerValue {
+	// --- get picker value as monkey string ---
+	@synchronized(datePickerLock) {
+		return self.datePickerTextField.text;
+	}
+}
 
 
 //alert view protocol
@@ -383,7 +586,8 @@
 	}
 }
 
-- (void)showMessage:(NSString *)title {
+- (void)showMessage:(NSString *)message title:(NSString *)title button:(NSString *)button {
+	self.inputFinished = false;
 	// --- show teh alert view ---
 	@synchronized(self.inputLock) {
 		//stop old
@@ -400,7 +604,7 @@
 	}
 	
 	//create new alert view
-	self.inputView = [[UIAlertView alloc] initWithTitle:title message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+	self.inputView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:button otherButtonTitles:nil];
 	
 	//show the alert
 	dispatch_async(dispatch_get_main_queue(), ^{
@@ -409,6 +613,7 @@
 }
 
 - (void)showConfirm:(NSString *)title {
+	self.inputFinished = false;
 	// --- show teh alert view ---
 	@synchronized(self.inputLock) {
 		//stop old
@@ -434,6 +639,7 @@
 }
 
 - (void)showInput:(NSString *)title value:(NSString *)value type:(int)type {
+	self.inputFinished = false;
 	// --- show teh alert view ---
 	@synchronized(self.inputLock) {
 		//stop old
@@ -563,13 +769,22 @@ public:
 	static NativeUIDelegateNative *delegate;
 	
 	static void InitNative();
+	
+	//picker
 	static void ShowPickerNative(Array<String > values,String value);
 	static bool HasPickerFinishedNative();
 	static String GetPickerValueNative();
 	static int GetPickerIndexNative();
+	
+	//date picker
+	static void ShowDatePickerNative(String mode);
+	static bool HasDatePickerFinishedNative();
+	static String GetDatePickerValueNative();
+	
+	//alert
 	static void ShowInputNative(String rawTitle, String rawValue, int type);
 	static void ShowConfirmNative(String rawTitle);
-	static void ShowMessageNative(String rawMessage,String rawTitle);
+	static void ShowMessageNative(String rawMessage,String rawTitle,String rawButton);
 	static bool HasInputFinishedNative();
 	static bool WasInputCancelledNative();
 	static String GetInputValueNative();
@@ -584,7 +799,7 @@ void NativeUINative::InitNative() {
 	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 }
 
-// --- picker view glue ------------
+// --- picker view stuff ------------
 void NativeUINative::ShowPickerNative(Array<String > values,String value) {
 	// --- so here we have a invisible picker object ??? ---
 	//make sure instance is created
@@ -637,6 +852,32 @@ String NativeUINative::GetPickerValueNative() {
 }
 
 
+// --- date picker view stuff ------------
+void NativeUINative::ShowDatePickerNative(String mode) {
+	// --- so here we have a invisible date picker object ??? ---
+	//make sure instance is created
+	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
+	
+	NSString *myMode = [mode.ToNSString() lowercaseString];
+		
+	//call instance method
+	[NativeUINative::delegate showDatePicker:myMode];
+}
+
+bool NativeUINative::HasDatePickerFinishedNative() {
+	// --- has date picker finished ---
+	//check that instance exists
+	if (NativeUINative::delegate == nil) { return true; }
+	return [NativeUINative::delegate hasDatePickerFinished];
+}
+
+String NativeUINative::GetDatePickerValueNative() {
+	// --- has date picker finished ---
+	//check that instance exists
+	if (NativeUINative::delegate == nil) { return String(@""); }
+	return String([NativeUINative::delegate getDatePickerValue]);
+}
+
 
 // --- alert view stuff ------------
 void NativeUINative::ShowInputNative(String rawTitle, String rawValue, int type) {
@@ -664,16 +905,18 @@ void NativeUINative::ShowConfirmNative(String rawTitle) {
 	[NativeUINative::delegate showConfirm:title];
 }
 
-void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle) {
+void NativeUINative::ShowMessageNative(String rawMessage,String rawTitle,String rawButton) {
 	// --- open an alert box ---
 	//make sure instance is created
 	if (NativeUINative::delegate == nil) { NativeUINative::delegate = [[NativeUIDelegateNative alloc] init]; }
 	
 	//convert values
 	NSString *message = rawMessage.ToNSString();
+	NSString *title = rawTitle.ToNSString();
+	NSString *button = rawButton.ToNSString();
 	
 	//call to instance to do it
-	[NativeUINative::delegate showMessage:message];
+	[NativeUINative::delegate showMessage:message title:title button:button];
 }
 
 bool NativeUINative::HasInputFinishedNative() {

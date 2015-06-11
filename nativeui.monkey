@@ -19,7 +19,7 @@ Strict
 'version 1
 ' - first release working on iOS
 
-#If TARGET = "ios" or TARGET = "glfw" or TARGET = "android"
+#If TARGET = "ios" Or TARGET = "glfw" Or TARGET = "android"
 	'ios
 	Import "native/nativeui.${TARGET}.${LANG}"
 
@@ -35,10 +35,14 @@ Strict
 			Function HasPickerFinished:Bool() = "NativeUINative.HasPickerFinishedNative"
 			Function GetPickerValue:String() = "NativeUINative.GetPickerValueNative"
 			Function GetPickerIndex:Int() = "NativeUINative.GetPickerIndexNative"
+				
+			Function ShowDatePicker:Void(type:String) = "NativeUINative.ShowDatePickerNative"
+			Function HasDatePickerFinished:Bool() = "NativeUINative.HasDatePickerFinishedNative"
+			Function GetDatePickerValue:String() = "NativeUINative.GetDatePickerValueNative"
 			
 			Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING) = "NativeUINative.ShowInputNative"
 			Function ShowConfirm:Void(title:String) = "NativeUINative.ShowConfirmNative"
-			Function ShowMessage:Void(message:String, title:String = "") = "NativeUINative.ShowMessageNative"
+			Function ShowMessage:Void(message:String, title:String = "", button:String = "OK") = "NativeUINative.ShowMessageNative"
 			Function HasInputFinished:Bool() = "NativeUINative.HasInputFinishedNative"
 			Function WasInputCancelled:Bool() = "NativeUINative.WasInputCancelledNative"
 			Function GetInputValue:String() = "NativeUINative.GetInputValueNative"
@@ -46,15 +50,19 @@ Strict
 	#Else
 		Extern
 			Function InitNativeUI:Void() = "NativeUINative::InitNative"
-			
+				
 			Function ShowPicker:Void(values:String[], value:String = "") = "NativeUINative::ShowPickerNative"
 			Function HasPickerFinished:Bool() = "NativeUINative::HasPickerFinishedNative"
 			Function GetPickerValue:String() = "NativeUINative::GetPickerValueNative"
 			Function GetPickerIndex:Int() = "NativeUINative::GetPickerIndexNative"
 			
+			Function ShowDatePicker:Void(type:String) = "NativeUINative::ShowDatePickerNative"
+			Function HasDatePickerFinished:Bool() = "NativeUINative::HasDatePickerFinishedNative"
+			Function GetDatePickerValue:String() = "NativeUINative::GetDatePickerValueNative"
+			
 			Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING) = "NativeUINative::ShowInputNative"
 			Function ShowConfirm:Void(title:String) = "NativeUINative::ShowConfirmNative"
-			Function ShowMessage:Void(message:String, title:String = "") = "NativeUINative::ShowMessageNative"
+			Function ShowMessage:Void(message:String, title:String = "", button:String = "OK") = "NativeUINative::ShowMessageNative"
 			Function HasInputFinished:Bool() = "NativeUINative::HasInputFinishedNative"
 			Function WasInputCancelled:Bool() = "NativeUINative::WasInputCancelledNative"
 			Function GetInputValue:String() = "NativeUINative::GetInputValueNative"
@@ -62,7 +70,7 @@ Strict
 	#EndIf
 #Else
 	'unsupported target
-	Const INPUT_TYPE_STRING:= 0
+	Const INPUT_TYPE_STRING := 0
 	Const INPUT_TYPE_INT:= 1
 	Const INPUT_TYPE_FLOAT:= 2
 	
@@ -71,7 +79,7 @@ Strict
 	
 	Function ShowPicker:Void(values:String[], value:String = "")
 	End
-	
+		
 	Function HasPickerFinished:Bool()
 		Return True
 	End
@@ -83,6 +91,17 @@ Strict
 	Function GetPickerIndex:Int()
 		Return -1
 	End
+	
+	Function ShowDatePicker:Void(type:String)
+	End
+
+	Function HasDatePickerFinished:Bool()
+		Return True
+	End
+
+	Function GetDatePickerValue:String()
+		Return ""
+	End
 
 	Function ShowInput:Void(title:String, value:String = "", type:Int = INPUT_TYPE_STRING)
 	End
@@ -90,7 +109,7 @@ Strict
 	Function ShowConfirm:Void(title:String)
 	End
 	
-	Function ShowMessage:Void(message:String, title:String = "")
+	Function ShowMessage:Void(message:String, title:String = "", button:String = "OK")
 	End
 	
 	Function HasInputFinished:Bool()
@@ -98,7 +117,7 @@ Strict
 	End
 	
 	Function WasInputCancelled:Bool()
-		return False
+		Return False
 	End
 	
 	Function GetInputValue:String()

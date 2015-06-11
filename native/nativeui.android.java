@@ -4,6 +4,20 @@ import android.widget.EditText;
 import android.widget.TextView.OnEditorActionListener;
 import android.content.DialogInterface;
 
+
+//////////////////////////////////////////////
+import java.util.Calendar;
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TimePicker;
+/////////////////////////////////////////////
 class NativeUINative {
 	private static boolean active = false;
 	private static boolean cancelled = false;
@@ -11,6 +25,7 @@ class NativeUINative {
 	private static AlertDialog activeDialog = null;
 	private static String selectedValue;
 	private static int selectedIndex = -1;
+	private static int mYear, mMonth, mDay, mHour, mMinute;
 
 	//internal
 	private static void CloseDialog() {
@@ -35,6 +50,7 @@ class NativeUINative {
 	}
 
 	public static void ShowPickerNative(final String[] values,final String value) {
+		finished = false;
 		//make sure this is executing on the correct thread!
 		BBAndroidGame.AndroidGame().GetActivity().runOnUiThread(new Runnable() {
 			@Override
@@ -44,7 +60,6 @@ class NativeUINative {
 
 				//create dialog builder
 				AlertDialog.Builder builder = new AlertDialog.Builder(BBAndroidGame.AndroidGame().GetActivity());
-
 				//add cancel event
 				builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
 					@Override
@@ -127,6 +142,9 @@ class NativeUINative {
 		});
 	}
 
+	
+	
+	
 	public static boolean HasPickerFinishedNative() {
 		//only return once
 		if (finished) {
@@ -146,7 +164,151 @@ class NativeUINative {
 		return selectedIndex;
 	}
 
+	public static void ShowDatePickerNative(final String type) {
+		finished = false;
+		//make sure this is executing on the correct thread!
+		BBAndroidGame.AndroidGame().GetActivity().runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				//close existing dialogs
+				NativeUINative.CloseDialog();
+
+				final Calendar c = Calendar.getInstance();
+				
+				String mType = type.toLowerCase();
+				
+				if (mType.equals("date")){ 
+					mYear = c.get(Calendar.YEAR);
+					mMonth = c.get(Calendar.MONTH);
+					mDay = c.get(Calendar.DAY_OF_MONTH);
+					
+					DatePickerDialog dpd = new DatePickerDialog(BBAndroidGame.AndroidGame().GetActivity(), new DatePickerDialog.OnDateSetListener() {
+					            @Override
+					            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+					            	selectedValue = dayOfMonth + "-"+ (monthOfYear + 1) + "-" + year;
+					            	NativeUINative.active = false;
+									NativeUINative.cancelled = false;
+									NativeUINative.finished = true;
+					            }
+					        }, mYear, mMonth, mDay);				
+					
+					dpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+					    public void onClick(DialogInterface dialog, int which)
+					    {
+					        if (which == DialogInterface.BUTTON_NEGATIVE)
+					        {
+					        	NativeUINative.active = false;
+	    						NativeUINative.cancelled = true;
+	    						NativeUINative.finished = true;
+					        }
+					    }
+					});
+					
+					dpd.show();
+				} else if (mType.equals("time")){
+					mHour = c.get(Calendar.HOUR_OF_DAY);
+		            mMinute = c.get(Calendar.MINUTE);
+		            
+		            TimePickerDialog tpd = new TimePickerDialog(BBAndroidGame.AndroidGame().GetActivity(), new TimePickerDialog.OnTimeSetListener() {
+		                        @Override
+		                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+		                        	selectedValue = hourOfDay + ":"+ minute;
+		                        	NativeUINative.active = false;
+									NativeUINative.cancelled = false;
+									NativeUINative.finished = true;
+		                        }
+		                    }, mHour, mMinute, false);
+		            
+		            tpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+					    public void onClick(DialogInterface dialog, int which)
+					    {
+					        if (which == DialogInterface.BUTTON_NEGATIVE)
+					        {
+					        	NativeUINative.active = false;
+	    						NativeUINative.cancelled = true;
+	    						NativeUINative.finished = true;
+					        }
+					    }
+					});
+		            
+		            tpd.show();
+				} else if (mType.equals("datetime")){
+					mYear = c.get(Calendar.YEAR);
+					mMonth = c.get(Calendar.MONTH);
+					mDay = c.get(Calendar.DAY_OF_MONTH);
+					mHour = c.get(Calendar.HOUR_OF_DAY);
+		            mMinute = c.get(Calendar.MINUTE);
+		            
+		            final TimePickerDialog tpd = new TimePickerDialog(BBAndroidGame.AndroidGame().GetActivity(), new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        	selectedValue += " "+hourOfDay + ":"+ minute;
+                        	NativeUINative.active = false;
+							NativeUINative.cancelled = false;
+							NativeUINative.finished = true;
+                        }
+                    }, mHour, mMinute, false);
+            
+		            tpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+					    public void onClick(DialogInterface dialog, int which)
+					    {
+					        if (which == DialogInterface.BUTTON_NEGATIVE)
+					        {
+					        	NativeUINative.active = false;
+								NativeUINative.cancelled = true;
+								NativeUINative.finished = true;
+					        }
+					    }
+					});
+					DatePickerDialog dpd = new DatePickerDialog(BBAndroidGame.AndroidGame().GetActivity(), new DatePickerDialog.OnDateSetListener() {
+					            @Override
+					            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+					            	selectedValue = dayOfMonth + "-"+ (monthOfYear + 1) + "-" + year;
+									tpd.show();
+					            }
+					        }, mYear, mMonth, mDay);				
+					
+					dpd.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+					    public void onClick(DialogInterface dialog, int which)
+					    {
+					        if (which == DialogInterface.BUTTON_NEGATIVE)
+					        {
+					        	NativeUINative.active = false;
+	    						NativeUINative.cancelled = true;
+	    						NativeUINative.finished = true;
+					        }
+					    }
+					});
+					
+					dpd.show();
+				}
+				
+
+				NativeUINative.active = true;
+				NativeUINative.cancelled = false;
+				NativeUINative.finished = false;
+
+			}
+		});
+	}
+
+	public static boolean HasDatePickerFinishedNative() {
+		//only return once
+		if (finished) {
+			finished = false;
+			return true;
+		}
+
+		//nope
+		return false;
+	}
+
+	public static String GetDatePickerValueNative() {
+		return selectedValue;
+	}
+	
 	public static void ShowInputNative(final String title, final String value, final int type) {
+		finished = false;
 		//make sure this is executing on the correct thread!
 		BBAndroidGame.AndroidGame().GetActivity().runOnUiThread(new Runnable() {
 			@Override
@@ -255,6 +417,7 @@ class NativeUINative {
 	}
 
 	public static void ShowConfirmNative(final String title) {
+		finished = false;
 		//make sure this is executing on the correct thread!
 		BBAndroidGame.AndroidGame().GetActivity().runOnUiThread(new Runnable() {
 			@Override
@@ -313,7 +476,8 @@ class NativeUINative {
 		});
 	}
 
-	public static void ShowMessageNative(final String message, final String title) {
+	public static void ShowMessageNative(final String message, final String title, final String button) {
+		finished = false;
 		//make sure this is executing on the correct thread!
 		BBAndroidGame.AndroidGame().GetActivity().runOnUiThread(new Runnable() {
 			@Override
@@ -344,7 +508,7 @@ class NativeUINative {
 				builder.setMessage(message);
 
 				//add buttons
-				builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				builder.setPositiveButton(button, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						//finish dialog

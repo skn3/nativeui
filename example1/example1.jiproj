@@ -9,7 +9,7 @@
       </CursorPos>
     </Document>
   </Files>
-  <CompilerConfig Configuration="debug" BuildMode="run" Target="Android_Game_(Api_10)" />
+  <CompilerConfig Configuration="debug" BuildMode="run" Target="Android_Game_(Experimental)" />
   <Version Major="15" Minor="1" Revision="12" Build="65" ProductName="Untitled product" />
   <PreBuildCommands />
 </JiProj>
